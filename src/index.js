@@ -1,8 +1,8 @@
 import  ReactDOM from "react-dom/client";
-import Reviews from "./reviews";
-import Array from "./third.js";
+import Product from "./product";
+import Counter from "./buttonIncrement";
 
 const rootElement=document.getElementById('root');
 const rootRef=ReactDOM.createRoot(rootElement);
-rootRef.render(<Reviews/>);
+rootRef.render(<Product/>);
 
