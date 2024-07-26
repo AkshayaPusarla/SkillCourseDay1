@@ -1,11 +1,17 @@
+import { useContext } from "react";
 import Counter from "./buttonIncrement";
+import NavBar from "./Navbar";
 import Reviews from "./reviews";
 import Review from "./six";
+import { globalContext } from "./parent";
 
 
 function Product(){
+    const {globalImage,setGlobalImage}=useContext(globalContext);
     return(
-        <div class="m-3">
+        <div>
+            <NavBar/>
+            <div class="m-3">
             <h1>Product Name</h1>
                 <div class="d-flex flex-row p-3" style={{borderWidth:'4px',border:'2px solid #ccc',borderColor:'#e9f0ea'}}>
                     <div>
@@ -30,6 +36,7 @@ function Product(){
                     <Review/>
                     <Reviews/>
                 </div>
+            </div>
         </div>
     );
 }
